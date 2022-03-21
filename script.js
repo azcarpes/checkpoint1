@@ -6,10 +6,13 @@ let botaoEnviar = document.getElementById("enviar");
 let conteudo = document.getElementById("conteudo");
 let botaoLimpar = document.getElementById("limpar");
 
+
+
 botaoEnviar.onclick = () => {
     if (nomePokemonInput.value == "" || numeroPokemonInput.value == "" || poderPokemonInput.value == "" || fotoInput.value == "") {
         return;
     }
+
     
     let card = document.createElement("div")
     card.setAttribute("id", "card")
