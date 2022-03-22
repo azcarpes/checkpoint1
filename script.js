@@ -5,11 +5,12 @@ let fotoInput = document.getElementById("imagem");
 let botaoEnviar = document.getElementById("enviar");
 let conteudo = document.getElementById("conteudo");
 let botaoLimpar = document.getElementById("limpar");
+let tipo = document.getElementById("listaTipos");
 
 
 
 botaoEnviar.onclick = () => {
-    if (nomePokemonInput.value == "" || numeroPokemonInput.value == "" || poderPokemonInput.value == "" || fotoInput.value == "") {
+    if (nomePokemonInput.value == "" || numeroPokemonInput.value == "" || poderPokemonInput.value == "" || fotoInput.value == "" || tipo.value == "") {
         return;
     }
 
@@ -30,10 +31,13 @@ botaoEnviar.onclick = () => {
     h22.innerText = `Poder: ${poderPokemonInput.value}` ;
     card.appendChild(h22);
 
+    let tipoPokemon = document.createElement("h2")
+    tipoPokemon.innerText = `Este Pokemon é do tipo: ${tipo.value}`
+    card.appendChild(tipoPokemon);
+
     let imagem = document.createElement("img")
     imagem.setAttribute("src", fotoInput.value)
     card.appendChild(imagem);
-    
 }
 
 botaoLimpar.onclick = () => {

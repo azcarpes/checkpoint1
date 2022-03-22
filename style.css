@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     box-sizing: 0;
 }
@@ -71,8 +71,8 @@ input {
 
 input#numero {
     -webkit-appearance: none; /* remove as setinhas do input tipo number na maioria dos navegadores*/
-    -moz-appearance: textfield; /* remove as setinhas no firefox */
-}
+    /* -moz-appearance: textfield; /* remove as setinhas no firefox */
+/* }
 
 #conteudo {
     display: flex;
@@ -100,5 +100,138 @@ footer {
 
     border: 2px solid black;
     text-align: center;
+
+} */
+
+* {
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: rgba(255, 255, 0, 0.637);
+    margin: 5px;
+
+    font-size: 20px;
+    font-family: 'EB Garamond', serif;
+
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 80% 10%;
+    gap: 1px;
+
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+header {
+    grid-area: header;
+
+    background-color: rgb(176, 39, 194);
+    color: aliceblue;
+    padding: 40px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+aside {
+    grid-area: aside;
+    border: 2px solid black;
+    height: 100%;
+    width: 240px;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(161, 192, 192);
+    font-family: fantasy;
+    box-sizing: border-box;
+
+
+}
+
+input:hover[type="text"] {
+    background-color:rgb(68, 173, 159);
+
+    }
+
+input:hover[type="number"] {
+        background-color:rgb(68, 173, 159);
+
+        }
+
+main {
+    grid-area: main;
+
+
+    align-items: center;
+    margin-left: 10%;
+
+}
+
+button {
+    width: 60px;
+    height: 20px;
+    margin-right: 10px;
+    color: aliceblue;
+    background-color: brown;
+}
+
+button:hover {
+    width: 100px;
+    height: 30px;
+    color: rgb(255, 174, 0);
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+}
+
+input#numero {
+    -webkit-appearance: none; /* remove as setinhas do input tipo number na maioria dos navegadores */
+    -moz-appearance: textfield; /* remove as setinhas no firefox */
+}
+
+select {
+    width: 100%;
+}
+
+select:hover {
+    background-color:rgb(68, 173, 159);
+}
+#conteudo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#card {
+    color: black;
+    background-color: orange;
+    padding: 20px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    width: 290px;
+    text-align: center;
+    margin: 5px;
+    display: flexbox;
+}
+
+img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(87, 209, 209);
+    width: 200fr;
+    height: 100pt;
+    border: 2px solid black;
+    text-align: center;
+    padding: auto;
 
 }
