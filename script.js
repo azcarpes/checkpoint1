@@ -45,5 +45,6 @@ botaoLimpar.onclick = () => {
     nomePokemonInput.value = "";
     numeroPokemonInput.value = "";
     poderPokemonInput.value = "";
-    fotoInput.value = "";   
+    fotoInput.value = "";
+    tipo.value = ""; 
 }
