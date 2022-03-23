@@ -1,12 +1,14 @@
 let nomePokemonInput = document.getElementById("nome");
 let numeroPokemonInput = document.getElementById("numero");
 let poderPokemonInput = document.getElementById("poder");
-let fotoInput = document.getElementById("imagem");
-let botaoEnviar = document.getElementById("enviar");
-let conteudo = document.getElementById("conteudo");
-let botaoLimpar = document.getElementById("limpar");
 let tipo = document.getElementById("listaTipos");
 let tipo2 = document.getElementById("listaTipos2");
+let fotoInput = document.getElementById("imagem");
+let conteudo = document.getElementById("conteudo");
+let botaoEnviar = document.getElementById("enviar");
+let botaoLimpar = document.getElementById("limpar");
+let validacaoBotao = document.getElementById("validacaoBotao")
+
 
 botaoEnviar.onclick = () => {
 	if (
@@ -17,6 +19,8 @@ botaoEnviar.onclick = () => {
 		tipo.value == "" ||
 		tipo2.value == ""
 	) {
+		validacaoBotao.innerText = "Campos obrigatórios não preenchidos";
+		validacaoBotao.style.color = "#E92323";
 		return;
 	}
 
@@ -52,6 +56,8 @@ botaoLimpar.onclick = () => {
 	fotoInput.value = "";
 	tipo.value = "";
 	tipo2.value = "";
+
+	conteudo.parentNode.removeChild(conteudo);
 };
 
 nomePokemonInput.addEventListener("blur", function () {
@@ -66,7 +72,7 @@ nomePokemonInput.addEventListener("blur", function () {
 		nomeValidacao.style.color = "#E92323";
 		nomeValidacao.innerText = "Campo é obrigatório";
 		nomePokemonInput.style.backgroundColor = "#DB7979BE";
-		botaoEnviar.setAttribute("disabled", true);
+		botaoEnviar.setAttribute("disabled", true)
 	}
 });
 
